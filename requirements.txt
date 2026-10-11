@@ -1,0 +1,10 @@
+
+numpy
+scikit-learn
+pdfplumber
+pypdf
+python-docx
+
+spacy
+sentence-transformers
+torch

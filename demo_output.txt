@@ -1,0 +1,121 @@
+
+==============================================================================
+0. Backends in use
+==============================================================================
+parser  : spacy   (real NER + dependency parse)
+encoder : sbert   (pretrained Sentence-BERT)
+
+==============================================================================
+1. Dependency-graph context inspection (Algorithm 1) - synthetic graph, Fig. 3.2
+==============================================================================
+sentence : Alex built Python APIs in Delhi and she led testing
+seeds    : ['Alex', 'Delhi', 'she']
+BFS      : [('Alex', 0), ('Delhi', 0), ('she', 0), ('built', 1), ('in', 1), ('led', 1), ('APIs', 2), ('and', 2), ('testing', 2), ('Python', 3)]
+DFS      : ['Alex', 'built', 'APIs', 'Python', 'in', 'Delhi', 'and', 'led', 'she', 'testing']
+depth-1 context of seeds: ['built', 'in', 'led']
+degree summary (inspection only, NOT a score): {'Alex': 1, 'built': 5, 'Python': 1, 'APIs': 2, 'in': 2, 'Delhi': 1, 'and': 1, 'she': 1, 'led': 3, 'testing': 1}
+
+==============================================================================
+2. NER masking + audit log on the IPR-I example sentence
+==============================================================================
+T  : Alex built Python APIs in Delhi and she led testing.
+T' : [PERSON] built Python APIs in [LOCATION] and [PRONOUN] led testing.
+audit log:
+[
+  {
+    "label": "PERSON",
+    "text": "Alex",
+    "start": 0,
+    "end": 4,
+    "replacement": "[PERSON]",
+    "source": "spacy",
+    "dependency": "nsubj",
+    "head": "built",
+    "context_tokens": [
+      "built"
+    ],
+    "context_kind": "dependency"
+  },
+  {
+    "label": "LOCATION",
+    "text": "Delhi",
+    "start": 26,
+    "end": 31,
+    "replacement": "[LOCATION]",
+    "source": "spacy",
+    "dependency": "pobj",
+    "head": "in",
+    "context_tokens": [
+      "in"
+    ],
+    "context_kind": "dependency"
+  },
+  {
+    "label": "PRONOUN",
+    "text": "she",
+    "start": 36,
+    "end": 39,
+    "replacement": "[PRONOUN]",
+    "source": "spacy",
+    "dependency": "nsubj",
+    "head": "led",
+    "context_tokens": [
+      "led"
+    ],
+    "context_kind": "dependency"
+  }
+]
+
+==============================================================================
+3. Masking-invariance check on controlled demographic variants
+==============================================================================
+profiles whose 4 demographic variants become IDENTICAL after masking: 0/6
+  residual differences in sw1:
+     '[PERSON]\nDelhi\n[PRONOUN] built Python REST APIs with [PERSON] and wrote unit tests. [PRONOUN] projects used SQL databases.'
+     '[PERSON]\nPune\n[PRONOUN] built Python REST APIs with [PERSON] and wrote unit tests. [PRONOUN] projects used SQL databases.'
+     '[PERSON]\n[PRONOUN] built Python REST APIs with [PERSON] and wrote unit tests. [PRONOUN] projects used SQL databases.'
+     'Amit Gupta\n[LOCATION]\n[PRONOUN] built Python REST APIs with [PERSON] and wrote unit tests. [PRONOUN] projects used SQL databases.'
+  residual differences in sw2:
+     '[PERSON]\nPune\n[PRONOUN] developed backend services in [LOCATION] and [LOCATION], automated testing and deployed with [PERSON]. [PRONOUN] work covered REST design.'
+     '[PERSON]\nDelhi\n[PRONOUN] developed backend services in [LOCATION] and [LOCATION], automated testing and deployed with [PERSON]. [PRONOUN] work covered REST design.'
+     'Amit Gupta\n[LOCATION]\n[PRONOUN] developed backend services in [LOCATION] and [LOCATION], automated testing and deployed with [PERSON]. [PRONOUN] work covered REST design.'
+     '[PERSON]\n[PRONOUN] developed backend services in [LOCATION] and [LOCATION], automated testing and deployed with [PERSON]. [PRONOUN] work covered REST design.'
+  residual differences in sw3:
+     '[PERSON]\nDelhi\n[PRONOUN] led API development in [LOCATION], wrote integration tests and maintained SQL schemas. [PRONOUN] team shipped weekly.'
+     'Amit Gupta\n[LOCATION]\n[PRONOUN] led API development in [LOCATION], wrote integration tests and maintained SQL schemas. [PRONOUN] team shipped weekly.'
+     '[PERSON]\nPune\n[PRONOUN] led API development in [LOCATION], wrote integration tests and maintained SQL schemas. [PRONOUN] team shipped weekly.'
+     '[PERSON]\n[PRONOUN] led API development in [LOCATION], wrote integration tests and maintained SQL schemas. [PRONOUN] team shipped weekly.'
+  residual differences in da1:
+     '[PERSON]\n[PRONOUN] built Excel and [LOCATION] dashboards and ran SQL reporting queries. [PRONOUN] analysis used statistics.'
+     '[PERSON]\nDelhi\n[PRONOUN] built Excel and [LOCATION] dashboards and ran SQL reporting queries. [PRONOUN] analysis used statistics.'
+     '[PERSON]\nPune\n[PRONOUN] built Excel and [LOCATION] dashboards and ran SQL reporting queries. [PRONOUN] analysis used statistics.'
+     'Amit Gupta\n[LOCATION]\n[PRONOUN] built Excel and [LOCATION] dashboards and ran SQL reporting queries. [PRONOUN] analysis used statistics.'
+  residual differences in da2:
+     '[PERSON]\nDelhi\n[PRONOUN] analysed sales data with SQL and statistics and presented dashboards. [PRONOUN] reports guided decisions.'
+     '[PERSON]\nPune\n[PRONOUN] analysed sales data with SQL and statistics and presented dashboards. [PRONOUN] reports guided decisions.'
+     'Amit Gupta\n[LOCATION]\n[PRONOUN] analysed sales data with SQL and statistics and presented dashboards. [PRONOUN] reports guided decisions.'
+     '[PERSON]\n[PRONOUN] analysed sales data with SQL and statistics and presented dashboards. [PRONOUN] reports guided decisions.'
+  residual differences in da3:
+     '[PERSON]\nPune\n[PRONOUN] cleaned datasets, built Tableau dashboards and applied statistical tests. [PRONOUN] SQL queries fed Excel models.'
+     '[PERSON]\n[PRONOUN] cleaned datasets, built Tableau dashboards and applied statistical tests. [PRONOUN] SQL queries fed Excel models.'
+     '[PERSON]\nDelhi\n[PRONOUN] cleaned datasets, built Tableau dashboards and applied statistical tests. [PRONOUN] SQL queries fed Excel models.'
+     'Amit Gupta\n[LOCATION]\n[PRONOUN] cleaned datasets, built Tableau dashboards and applied statistical tests. [PRONOUN] SQL queries fed Excel models.'
+(This verifies the masker on the synthetic variants; it is a component check,
+ not evidence of fairness improvement on real data.)
+
+==============================================================================
+4. Paired pipeline mechanics (A: unmasked  vs  B: masked)  --  SYNTHETIC SMOKE TEST
+==============================================================================
+*** NOT EXPERIMENTAL RESULTS: synthetic data, by-construction relevance, ***
+*** fallback components may be in use. Shown only to prove M1-M6 run end to end. ***
+
+metric                    A (unmasked)      B (masked)
+k                               8.0000          8.0000
+rate_Z1_reference               0.3750          0.3333
+rate_Z0_comparison              0.2917          0.3333
+DI                              0.7778          1.0000
+DPD                            -0.0833          0.0000
+MRR                             1.0000          1.0000
+Recall@8                        0.6667          0.6667
+
+wrote outputs/audit_log.json and outputs/smoke_metrics.json

@@ -1,0 +1,199 @@
+{
+  "resume1": [
+    {
+      "label": "PERSON",
+      "text": "Vyomesh Mishra",
+      "start": 0,
+      "end": 14,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Mishra",
+      "context_tokens": [
+        "\n",
+        "7651950803",
+        "|",
+        "mishravyomesh14@gmail.com"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "React",
+      "start": 368,
+      "end": 373,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "Python",
+      "context_tokens": [
+        "Python",
+        ",",
+        "and",
+        "FastAPI"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Java",
+      "start": 617,
+      "end": 621,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "Languages",
+      "context_tokens": [
+        "Languages",
+        "(",
+        "Intermediate",
+        ")",
+        ",",
+        "C",
+        "HTML"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "C++",
+      "start": 641,
+      "end": 644,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "C",
+      "context_tokens": [
+        "C",
+        ",",
+        "Web"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "JavaScript",
+      "start": 646,
+      "end": 656,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Web",
+      "context_tokens": [
+        "\n",
+        "Web"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "React",
+      "start": 683,
+      "end": 688,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "CSS",
+      "context_tokens": [
+        "CSS",
+        ","
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Algorithms",
+      "start": 730,
+      "end": 740,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "Structures",
+      "context_tokens": [
+        "Structures",
+        ",",
+        "Programming"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Java",
+      "start": 1231,
+      "end": 1235,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "programming",
+      "context_tokens": [
+        "programming"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "ACADEMIC PROJECTS\nAI-Driven Smart File",
+      "start": 1553,
+      "end": 1591,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "PROJECTS",
+      "context_tokens": [
+        "Nov",
+        "Noida",
+        "UP",
+        "\u2013",
+        "Programmed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "React",
+      "start": 1879,
+      "end": 1884,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "interface",
+      "context_tokens": [
+        "interface"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Java",
+      "start": 2467,
+      "end": 2471,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "dobj",
+      "head": "using",
+      "context_tokens": [
+        "using",
+        "and",
+        "SQL"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Java Data Structures",
+      "start": 2920,
+      "end": 2940,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Structures",
+      "context_tokens": [
+        "Earned",
+        ",",
+        "and",
+        "Programming"
+      ],
+      "context_kind": "dependency"
+    }
+  ]
+}

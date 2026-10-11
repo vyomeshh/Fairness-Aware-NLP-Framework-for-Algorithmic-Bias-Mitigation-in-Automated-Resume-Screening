@@ -1,0 +1,25 @@
+{
+  "WARNING": "synthetic smoke test - not experimental results",
+  "parser": "spacy",
+  "encoder": "sbert",
+  "metrics": {
+    "A": {
+      "k": 8,
+      "rate_Z1_reference": 0.375,
+      "rate_Z0_comparison": 0.2916666666666667,
+      "DI": 0.7777777777777778,
+      "DPD": -0.08333333333333331,
+      "MRR": 1.0,
+      "Recall@8": 0.6666666666666666
+    },
+    "B": {
+      "k": 8,
+      "rate_Z1_reference": 0.3333333333333333,
+      "rate_Z0_comparison": 0.3333333333333333,
+      "DI": 1.0,
+      "DPD": 0.0,
+      "MRR": 1.0,
+      "Recall@8": 0.6666666666666666
+    }
+  }
+}

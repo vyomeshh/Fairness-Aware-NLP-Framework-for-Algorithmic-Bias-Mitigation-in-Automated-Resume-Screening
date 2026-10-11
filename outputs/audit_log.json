@@ -1,0 +1,308 @@
+{
+  "jd": [
+    {
+      "label": "LOCATION",
+      "text": "Duolingo",
+      "start": 831,
+      "end": 839,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "pobj",
+      "head": "like",
+      "context_tokens": [
+        "like"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Figma",
+      "start": 1220,
+      "end": 1225,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "pobj",
+      "head": "in",
+      "context_tokens": [
+        "in"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Lottie",
+      "start": 2507,
+      "end": 2513,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "Effects",
+      "context_tokens": [
+        "Effects",
+        ",",
+        "or",
+        "Rive"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Signature City",
+      "start": 2715,
+      "end": 2729,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "City",
+      "context_tokens": [
+        "showing",
+        "OFFICE",
+        ",",
+        "Bhopal"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Katara Hills",
+      "start": 2731,
+      "end": 2743,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Bhopal",
+      "context_tokens": [
+        "\n",
+        "Bhopal"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Madhya Pradesh",
+      "start": 2752,
+      "end": 2766,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Pradesh",
+      "context_tokens": [
+        "Bhopal",
+        "\u2014"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "India",
+      "start": 2776,
+      "end": 2781,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "CONTACT",
+      "context_tokens": [
+        "\n",
+        "CONTACT"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "Resume-Vyomesh": [
+    {
+      "label": "PERSON",
+      "text": "Vyomesh Mishra",
+      "start": 0,
+      "end": 14,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Mishra",
+      "context_tokens": [
+        "\n",
+        "7651950803",
+        "|",
+        "mishravyomesh14@gmail.com"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "React",
+      "start": 368,
+      "end": 373,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "Python",
+      "context_tokens": [
+        "Python",
+        ",",
+        "and",
+        "FastAPI"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Java",
+      "start": 617,
+      "end": 621,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "Languages",
+      "context_tokens": [
+        "Languages",
+        "(",
+        "Intermediate",
+        ")",
+        ",",
+        "C",
+        "HTML"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "C++",
+      "start": 641,
+      "end": 644,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "C",
+      "context_tokens": [
+        "C",
+        ",",
+        "Web"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "JavaScript",
+      "start": 646,
+      "end": 656,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Web",
+      "context_tokens": [
+        "\n",
+        "Web"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "React",
+      "start": 683,
+      "end": 688,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "CSS",
+      "context_tokens": [
+        "CSS",
+        ","
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Algorithms",
+      "start": 730,
+      "end": 740,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "conj",
+      "head": "Structures",
+      "context_tokens": [
+        "Structures",
+        ",",
+        "Programming"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Java",
+      "start": 1231,
+      "end": 1235,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "programming",
+      "context_tokens": [
+        "programming"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "ACADEMIC PROJECTS\nAI-Driven Smart File",
+      "start": 1553,
+      "end": 1591,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "PROJECTS",
+      "context_tokens": [
+        "Nov",
+        "Noida",
+        "UP",
+        "\u2013",
+        "Programmed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "React",
+      "start": 1879,
+      "end": 1884,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "interface",
+      "context_tokens": [
+        "interface"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Java",
+      "start": 2467,
+      "end": 2471,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "dobj",
+      "head": "using",
+      "context_tokens": [
+        "using",
+        "and",
+        "SQL"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PERSON",
+      "text": "Java Data Structures",
+      "start": 2920,
+      "end": 2940,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Structures",
+      "context_tokens": [
+        "Earned",
+        ",",
+        "and",
+        "Programming"
+      ],
+      "context_kind": "dependency"
+    }
+  ]
+}
