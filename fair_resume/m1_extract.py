@@ -20,10 +20,25 @@ def _read_pdf(path: Path) -> str:
     try:
         import pdfplumber
         with pdfplumber.open(str(path)) as pdf:
-            return "\n".join((p.extract_text() or "") for p in pdf.pages)
+            pages = []
+            for p in pdf.pages:
+                text = p.extract_text(layout=True) or p.extract_text() or ""
+                pages.append(text)
+            return "\n".join(pages)
     except ImportError:
+        pass
+    except Exception:
+        pass
+
+    try:
         from pypdf import PdfReader
         return "\n".join((p.extract_text() or "") for p in PdfReader(str(path)).pages)
+    except ImportError:
+        raise ImportError(
+            "PDF extraction requires 'pdfplumber' or 'pypdf'. "
+            "Please activate your virtual environment (e.g., .\\venv\\Scripts\\activate) "
+            "or install dependencies via 'pip install -r requirements.txt'."
+        )
 
 
 def _read_docx(path: Path) -> str:

@@ -37,10 +37,14 @@ def main():
 
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     with open(out / "rankings.csv", "w", newline="") as f:
-        w = csv.writer(f); w.writerow(["candidate", "rank_A", "score_A", "rank_B", "score_B"])
+        w = csv.writer(f)
+        w.writerow(["candidate", "rank_A", "score_A", "rank_B", "score_B", "rank_diff (B-A)", "score_diff (B-A)"])
         for rid in resumes:
-            w.writerow([rid, ra["JD"].index(rid) + 1, round(sa["JD"][rid], 4),
-                        rb["JD"].index(rid) + 1, round(sb["JD"][rid], 4)])
+            r_a = ra["JD"].index(rid) + 1
+            r_b = rb["JD"].index(rid) + 1
+            s_a = round(sa["JD"][rid], 4)
+            s_b = round(sb["JD"][rid], 4)
+            w.writerow([rid, r_a, s_a, r_b, s_b, r_b - r_a, round(s_b - s_a, 4)])
     (out / "audit_log.json").write_text(json.dumps(audit, indent=2))
     print(f"parser={parser.backend} encoder={enc.name}; wrote {out}/rankings.csv and audit_log.json")
 

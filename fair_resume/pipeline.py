@@ -50,6 +50,7 @@ def evaluate(rankings: Dict[str, List[str]], groups: Dict[str, int],
         "DI": M.disparate_impact(sel, grp),
         "DPD": M.demographic_parity_difference(sel, grp),
         "MRR": M.mean_reciprocal_rank(rankings, relevant),
+        "MAP": M.mean_average_precision(rankings, relevant, k=k),
         f"Recall@{k}": M.recall_at_k(rankings, relevant, k),
     }
 

@@ -69,37 +69,7 @@ audit log:
 ==============================================================================
 3. Masking-invariance check on controlled demographic variants
 ==============================================================================
-profiles whose 4 demographic variants become IDENTICAL after masking: 0/6
-  residual differences in sw1:
-     '[PERSON]\nDelhi\n[PRONOUN] built Python REST APIs with [PERSON] and wrote unit tests. [PRONOUN] projects used SQL databases.'
-     '[PERSON]\nPune\n[PRONOUN] built Python REST APIs with [PERSON] and wrote unit tests. [PRONOUN] projects used SQL databases.'
-     '[PERSON]\n[PRONOUN] built Python REST APIs with [PERSON] and wrote unit tests. [PRONOUN] projects used SQL databases.'
-     'Amit Gupta\n[LOCATION]\n[PRONOUN] built Python REST APIs with [PERSON] and wrote unit tests. [PRONOUN] projects used SQL databases.'
-  residual differences in sw2:
-     '[PERSON]\nPune\n[PRONOUN] developed backend services in [LOCATION] and [LOCATION], automated testing and deployed with [PERSON]. [PRONOUN] work covered REST design.'
-     '[PERSON]\nDelhi\n[PRONOUN] developed backend services in [LOCATION] and [LOCATION], automated testing and deployed with [PERSON]. [PRONOUN] work covered REST design.'
-     'Amit Gupta\n[LOCATION]\n[PRONOUN] developed backend services in [LOCATION] and [LOCATION], automated testing and deployed with [PERSON]. [PRONOUN] work covered REST design.'
-     '[PERSON]\n[PRONOUN] developed backend services in [LOCATION] and [LOCATION], automated testing and deployed with [PERSON]. [PRONOUN] work covered REST design.'
-  residual differences in sw3:
-     '[PERSON]\nDelhi\n[PRONOUN] led API development in [LOCATION], wrote integration tests and maintained SQL schemas. [PRONOUN] team shipped weekly.'
-     'Amit Gupta\n[LOCATION]\n[PRONOUN] led API development in [LOCATION], wrote integration tests and maintained SQL schemas. [PRONOUN] team shipped weekly.'
-     '[PERSON]\nPune\n[PRONOUN] led API development in [LOCATION], wrote integration tests and maintained SQL schemas. [PRONOUN] team shipped weekly.'
-     '[PERSON]\n[PRONOUN] led API development in [LOCATION], wrote integration tests and maintained SQL schemas. [PRONOUN] team shipped weekly.'
-  residual differences in da1:
-     '[PERSON]\n[PRONOUN] built Excel and [LOCATION] dashboards and ran SQL reporting queries. [PRONOUN] analysis used statistics.'
-     '[PERSON]\nDelhi\n[PRONOUN] built Excel and [LOCATION] dashboards and ran SQL reporting queries. [PRONOUN] analysis used statistics.'
-     '[PERSON]\nPune\n[PRONOUN] built Excel and [LOCATION] dashboards and ran SQL reporting queries. [PRONOUN] analysis used statistics.'
-     'Amit Gupta\n[LOCATION]\n[PRONOUN] built Excel and [LOCATION] dashboards and ran SQL reporting queries. [PRONOUN] analysis used statistics.'
-  residual differences in da2:
-     '[PERSON]\nDelhi\n[PRONOUN] analysed sales data with SQL and statistics and presented dashboards. [PRONOUN] reports guided decisions.'
-     '[PERSON]\nPune\n[PRONOUN] analysed sales data with SQL and statistics and presented dashboards. [PRONOUN] reports guided decisions.'
-     'Amit Gupta\n[LOCATION]\n[PRONOUN] analysed sales data with SQL and statistics and presented dashboards. [PRONOUN] reports guided decisions.'
-     '[PERSON]\n[PRONOUN] analysed sales data with SQL and statistics and presented dashboards. [PRONOUN] reports guided decisions.'
-  residual differences in da3:
-     '[PERSON]\nPune\n[PRONOUN] cleaned datasets, built Tableau dashboards and applied statistical tests. [PRONOUN] SQL queries fed Excel models.'
-     '[PERSON]\n[PRONOUN] cleaned datasets, built Tableau dashboards and applied statistical tests. [PRONOUN] SQL queries fed Excel models.'
-     '[PERSON]\nDelhi\n[PRONOUN] cleaned datasets, built Tableau dashboards and applied statistical tests. [PRONOUN] SQL queries fed Excel models.'
-     'Amit Gupta\n[LOCATION]\n[PRONOUN] cleaned datasets, built Tableau dashboards and applied statistical tests. [PRONOUN] SQL queries fed Excel models.'
+profiles whose 4 demographic variants become IDENTICAL after masking: 6/6
 (This verifies the masker on the synthetic variants; it is a component check,
  not evidence of fairness improvement on real data.)
 
@@ -116,6 +86,7 @@ rate_Z0_comparison              0.2917          0.3333
 DI                              0.7778          1.0000
 DPD                            -0.0833          0.0000
 MRR                             1.0000          1.0000
+MAP                             1.0000          1.0000
 Recall@8                        0.6667          0.6667
 
 wrote outputs/audit_log.json and outputs/smoke_metrics.json

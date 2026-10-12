@@ -127,6 +127,11 @@ class MetricTests(unittest.TestCase):
         rk = {"q": ["a", "x", "c", "y", "b", "d"]}
         self.assertAlmostEqual(M.recall_at_k(rk, {"q": {"a", "b", "c", "d"}}, 3), 0.5)
 
+    def test_map(self):
+        rk = {"q1": ["a", "b", "c"], "q2": ["x", "y", "z"]}
+        rel = {"q1": {"a", "c"}, "q2": {"y"}}
+        self.assertAlmostEqual(M.mean_average_precision(rk, rel), ((1.0 + 2.0 / 3.0) / 2.0 + 0.5) / 2.0)
+
     def test_bootstrap_ci_contains_mean_and_reproducible(self):
         d = [0.1, 0.2, 0.15, 0.05, 0.12]
         m, (lo, hi) = M.paired_bootstrap_ci(d, seed=1)

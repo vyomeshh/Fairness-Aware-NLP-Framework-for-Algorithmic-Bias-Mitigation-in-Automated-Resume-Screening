@@ -54,6 +54,31 @@ def recall_at_k(rankings: Dict[str, List[str]], relevant: Dict[str, Set[str]], k
     return float(np.mean(vals)) if vals else float("nan")
 
 
+def average_precision(ranked: Sequence[str], relevant: Set[str], k: int = None) -> float:
+    """Average Precision (AP) for a query up to rank k."""
+    if not relevant:
+        return float("nan")
+    items = ranked[:k] if k is not None else ranked
+    hits, score = 0, 0.0
+    for i, item in enumerate(items):
+        if item in relevant:
+            hits += 1
+            score += hits / (i + 1)
+    denom = min(len(relevant), len(items))
+    return (score / denom) if denom > 0 else 0.0
+
+
+def mean_average_precision(rankings: Dict[str, List[str]], relevant: Dict[str, Set[str]],
+                           k: int = None) -> float:
+    """Mean Average Precision (MAP) across queries with relevant items."""
+    scores = []
+    for q, ranked in rankings.items():
+        rel = relevant.get(q, set())
+        if rel:
+            scores.append(average_precision(ranked, rel, k=k))
+    return float(np.mean(scores)) if scores else float("nan")
+
+
 def paired_bootstrap_ci(diffs: Iterable[float], n_boot: int = 2000, alpha: float = 0.05,
                         seed: int = 42):
     """Mean of paired differences (masked - baseline) with a percentile bootstrap

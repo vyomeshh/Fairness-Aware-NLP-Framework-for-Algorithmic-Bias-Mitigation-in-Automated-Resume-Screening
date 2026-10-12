@@ -7,7 +7,7 @@
       "end": 14,
       "replacement": "[PERSON]",
       "source": "spacy",
-      "dependency": "compound",
+      "dependency": "ROOT",
       "head": "Mishra",
       "context_tokens": [
         "\n",
@@ -19,84 +19,20 @@
     },
     {
       "label": "LOCATION",
-      "text": "React",
-      "start": 368,
-      "end": 373,
+      "text": "Greater Noida",
+      "start": 62,
+      "end": 75,
       "replacement": "[LOCATION]",
-      "source": "spacy",
-      "dependency": "conj",
-      "head": "Python",
+      "source": "spacy+gazetteer",
+      "dependency": "ROOT",
+      "head": "Noida",
       "context_tokens": [
-        "Python",
+        "|",
         ",",
-        "and",
-        "FastAPI"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "PERSON",
-      "text": "Java",
-      "start": 617,
-      "end": 621,
-      "replacement": "[PERSON]",
-      "source": "spacy",
-      "dependency": "conj",
-      "head": "Languages",
-      "context_tokens": [
-        "Languages",
-        "(",
-        "Intermediate",
-        ")",
-        ",",
-        "C",
-        "HTML"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "PERSON",
-      "text": "C++",
-      "start": 641,
-      "end": 644,
-      "replacement": "[PERSON]",
-      "source": "spacy",
-      "dependency": "conj",
-      "head": "C",
-      "context_tokens": [
-        "C",
-        ",",
-        "Web"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "PERSON",
-      "text": "JavaScript",
-      "start": 646,
-      "end": 656,
-      "replacement": "[PERSON]",
-      "source": "spacy",
-      "dependency": "compound",
-      "head": "Web",
-      "context_tokens": [
-        "\n",
-        "Web"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "LOCATION",
-      "text": "React",
-      "start": 683,
-      "end": 688,
-      "replacement": "[LOCATION]",
-      "source": "spacy",
-      "dependency": "conj",
-      "head": "CSS",
-      "context_tokens": [
-        "CSS",
-        ","
+        "UP",
+        "LinkedIn",
+        "undergraduate",
+        "."
       ],
       "context_kind": "dependency"
     },
@@ -117,29 +53,109 @@
       "context_kind": "dependency"
     },
     {
-      "label": "PERSON",
-      "text": "Java",
-      "start": 1231,
-      "end": 1235,
-      "replacement": "[PERSON]",
-      "source": "spacy",
-      "dependency": "compound",
-      "head": "programming",
+      "label": "LOCATION",
+      "text": "Greater Noida",
+      "start": 964,
+      "end": 977,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "conj",
+      "head": "Science",
       "context_tokens": [
-        "programming"
+        "Science",
+        "Engineering"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 982,
+      "end": 989,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "compound",
+      "head": "School",
+      "context_tokens": [
+        "School"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 1035,
+      "end": 1042,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "ROOT",
+      "head": "Lucknow",
+      "context_tokens": [
+        ",",
+        "UP",
+        ",",
+        "%",
+        ")"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 1047,
+      "end": 1054,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "compound",
+      "head": "School",
+      "context_tokens": [
+        "School"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 1098,
+      "end": 1105,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "ROOT",
+      "head": "Lucknow",
+      "context_tokens": [
+        ",",
+        "UP",
+        "GUVI"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Noida",
+      "start": 1170,
+      "end": 1175,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "appos",
+      "head": "Aug",
+      "context_tokens": [
+        "Aug",
+        "2025",
+        "Mentor"
       ],
       "context_kind": "dependency"
     },
     {
       "label": "PERSON",
-      "text": "ACADEMIC PROJECTS\nAI-Driven Smart File",
+      "text": "ACADEMIC PROJECTS",
       "start": 1553,
-      "end": 1591,
+      "end": 1570,
       "replacement": "[PERSON]",
       "source": "spacy",
-      "dependency": "compound",
-      "head": "PROJECTS",
+      "dependency": "nsubj",
+      "head": "Programmed",
       "context_tokens": [
+        "\n",
         "Nov",
         "Noida",
         "UP",
@@ -149,32 +165,73 @@
       "context_kind": "dependency"
     },
     {
-      "label": "LOCATION",
-      "text": "React",
-      "start": 1879,
-      "end": 1884,
-      "replacement": "[LOCATION]",
+      "label": "PERSON",
+      "text": "AI-Driven Smart File",
+      "start": 1571,
+      "end": 1591,
+      "replacement": "[PERSON]",
       "source": "spacy",
       "dependency": "compound",
-      "head": "interface",
+      "head": "Nov",
       "context_tokens": [
-        "interface"
+        "Nov"
       ],
       "context_kind": "dependency"
     },
     {
-      "label": "PERSON",
-      "text": "Java",
-      "start": 2467,
-      "end": 2471,
-      "replacement": "[PERSON]",
-      "source": "spacy",
-      "dependency": "dobj",
-      "head": "using",
+      "label": "LOCATION",
+      "text": "Greater Noida",
+      "start": 1640,
+      "end": 1653,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "appos",
+      "head": "PROJECTS",
       "context_tokens": [
-        "using",
-        "and",
-        "SQL"
+        "PROJECTS",
+        "Jan",
+        "Project",
+        "Developer",
+        ","
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Greater Noida",
+      "start": 2004,
+      "end": 2017,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "appos",
+      "head": "Nov",
+      "context_tokens": [
+        "Nov",
+        "Jan",
+        "Project",
+        "Developer",
+        ","
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Greater Noida",
+      "start": 2395,
+      "end": 2408,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "nsubj",
+      "head": "Coded",
+      "context_tokens": [
+        "Apr",
+        "2024",
+        "Project",
+        "Developer",
+        ",",
+        "UP",
+        "\u2013",
+        "Coded"
       ],
       "context_kind": "dependency"
     },
@@ -185,8 +242,8 @@
       "end": 2940,
       "replacement": "[PERSON]",
       "source": "spacy",
-      "dependency": "compound",
-      "head": "Structures",
+      "dependency": "dobj",
+      "head": "Earned",
       "context_tokens": [
         "Earned",
         ",",

@@ -1,2 +1,2 @@
-candidate,rank_A,score_A,rank_B,score_B
-resume1,1,0.3618,1,0.344
+candidate,rank_A,score_A,rank_B,score_B,rank_diff (B-A),score_diff (B-A)
+resume1,1,0.3618,1,0.3951,0,0.0333

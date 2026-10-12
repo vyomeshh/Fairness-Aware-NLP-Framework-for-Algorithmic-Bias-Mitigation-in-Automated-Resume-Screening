@@ -29,13 +29,21 @@ def mask_text(doc: ParsedDoc, cfg: MaskConfig = MaskConfig()) -> Tuple[str, List
         pieces.append(repl)
         cursor = e.end
         ctx_ids = doc.graph.bounded_neighborhood(e.token_ids, cfg.context_depth)
-        head_dep = [(doc.tokens[i].dep, doc.tokens[doc.tokens[i].head].text)
-                    for i in e.token_ids if doc.has_syntax and doc.tokens[i].head >= 0]
+        dep_role, head_word = None, None
+        if doc.has_syntax and e.token_ids:
+            ent_set = set(e.token_ids)
+            roots = [doc.tokens[i] for i in e.token_ids
+                     if 0 <= doc.tokens[i].head < len(doc.tokens) and doc.tokens[i].head not in ent_set]
+            root = roots[0] if roots else doc.tokens[e.token_ids[-1]]
+            if 0 <= root.head < len(doc.tokens):
+                dep_role = root.dep
+                head_word = doc.tokens[root.head].text
+
         log.append({
             "label": e.label, "text": e.text, "start": e.start, "end": e.end,
             "replacement": repl, "source": e.source,
-            "dependency": head_dep[0][0] if head_dep else None,
-            "head": head_dep[0][1] if head_dep else None,
+            "dependency": dep_role,
+            "head": head_word,
             "context_tokens": [doc.tokens[i].text for i in ctx_ids],
             "context_kind": "dependency" if doc.has_syntax else "linear-adjacency (no parser)",
         })

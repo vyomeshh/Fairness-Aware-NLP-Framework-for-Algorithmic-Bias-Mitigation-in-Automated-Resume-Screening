@@ -39,6 +39,14 @@ LOCATIONS = {
     "London", "New York", "California", "Texas",
 }
 
+# Technical skills and tools preserved from demographic masking (IPR-I Table 3.2)
+TECHNICAL_SKILLS = {
+    "python", "flask", "docker", "tableau", "sql", "excel", "rest", "api", "apis",
+    "react", "django", "aws", "azure", "kubernetes", "git", "linux", "jira",
+    "pandas", "numpy", "pytorch", "tensorflow", "c++", "java", "javascript",
+    "html", "css", "figma", "photoshop", "illustrator",
+}
+
 
 @dataclass(frozen=True)
 class MaskConfig:

@@ -1,306 +1,1467 @@
 {
-  "jd": [
-    {
-      "label": "LOCATION",
-      "text": "Duolingo",
-      "start": 831,
-      "end": 839,
-      "replacement": "[LOCATION]",
-      "source": "spacy",
-      "dependency": "pobj",
-      "head": "like",
-      "context_tokens": [
-        "like"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "LOCATION",
-      "text": "Figma",
-      "start": 1220,
-      "end": 1225,
-      "replacement": "[LOCATION]",
-      "source": "spacy",
-      "dependency": "pobj",
-      "head": "in",
-      "context_tokens": [
-        "in"
-      ],
-      "context_kind": "dependency"
-    },
+  "sw1_Rahul": [
     {
       "label": "PERSON",
-      "text": "Lottie",
-      "start": 2507,
-      "end": 2513,
-      "replacement": "[PERSON]",
-      "source": "spacy",
-      "dependency": "conj",
-      "head": "Effects",
-      "context_tokens": [
-        "Effects",
-        ",",
-        "or",
-        "Rive"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "LOCATION",
-      "text": "Signature City",
-      "start": 2715,
-      "end": 2729,
-      "replacement": "[LOCATION]",
-      "source": "spacy",
-      "dependency": "compound",
-      "head": "City",
-      "context_tokens": [
-        "showing",
-        "OFFICE",
-        ",",
-        "Bhopal"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "LOCATION",
-      "text": "Katara Hills",
-      "start": 2731,
-      "end": 2743,
-      "replacement": "[LOCATION]",
-      "source": "spacy",
-      "dependency": "compound",
-      "head": "Bhopal",
-      "context_tokens": [
-        "\n",
-        "Bhopal"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "PERSON",
-      "text": "Madhya Pradesh",
-      "start": 2752,
-      "end": 2766,
+      "text": "Rahul Sharma",
+      "start": 0,
+      "end": 12,
       "replacement": "[PERSON]",
       "source": "spacy",
       "dependency": "compound",
-      "head": "Pradesh",
+      "head": "Delhi",
       "context_tokens": [
-        "Bhopal",
-        "\u2014"
+        "\n",
+        "Delhi"
       ],
       "context_kind": "dependency"
     },
     {
       "label": "LOCATION",
-      "text": "India",
-      "start": 2776,
-      "end": 2781,
+      "text": "Delhi",
+      "start": 13,
+      "end": 18,
       "replacement": "[LOCATION]",
-      "source": "spacy",
-      "dependency": "compound",
-      "head": "CONTACT",
+      "source": "spacy+gazetteer",
+      "dependency": "nsubj",
+      "head": "built",
       "context_tokens": [
+        "Sharma",
         "\n",
-        "CONTACT"
+        "built"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 19,
+      "end": 21,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "built",
+      "context_tokens": [
+        "built"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 79,
+      "end": 82,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "projects",
+      "context_tokens": [
+        "projects"
       ],
       "context_kind": "dependency"
     }
   ],
-  "Resume-Vyomesh": [
+  "sw1_Amit": [
     {
       "label": "PERSON",
-      "text": "Vyomesh Mishra",
+      "text": "Amit Gupta",
       "start": 0,
-      "end": 14,
+      "end": 10,
       "replacement": "[PERSON]",
-      "source": "spacy",
+      "source": "spacy+gazetteer",
       "dependency": "compound",
-      "head": "Mishra",
+      "head": "Mumbai",
       "context_tokens": [
         "\n",
-        "7651950803",
-        "|",
-        "mishravyomesh14@gmail.com"
+        "Mumbai"
       ],
       "context_kind": "dependency"
     },
     {
       "label": "LOCATION",
-      "text": "React",
-      "start": 368,
-      "end": 373,
+      "text": "Mumbai",
+      "start": 11,
+      "end": 17,
       "replacement": "[LOCATION]",
       "source": "spacy",
-      "dependency": "conj",
-      "head": "Python",
+      "dependency": "nsubj",
+      "head": "built",
       "context_tokens": [
-        "Python",
-        ",",
-        "and",
-        "FastAPI"
+        "Amit",
+        "Gupta",
+        "\n",
+        "built"
       ],
       "context_kind": "dependency"
     },
     {
-      "label": "PERSON",
-      "text": "Java",
-      "start": 617,
-      "end": 621,
-      "replacement": "[PERSON]",
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 18,
+      "end": 20,
+      "replacement": "[PRONOUN]",
       "source": "spacy",
-      "dependency": "conj",
-      "head": "Languages",
+      "dependency": "nsubj",
+      "head": "built",
       "context_tokens": [
-        "Languages",
-        "(",
-        "Intermediate",
-        ")",
-        ",",
-        "C",
-        "HTML"
+        "built"
       ],
       "context_kind": "dependency"
     },
     {
-      "label": "PERSON",
-      "text": "C++",
-      "start": 641,
-      "end": 644,
-      "replacement": "[PERSON]",
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 78,
+      "end": 81,
+      "replacement": "[PRONOUN]",
       "source": "spacy",
-      "dependency": "conj",
-      "head": "C",
+      "dependency": "poss",
+      "head": "projects",
       "context_tokens": [
-        "C",
-        ",",
-        "Web"
+        "projects"
       ],
       "context_kind": "dependency"
-    },
+    }
+  ],
+  "sw1_Priya": [
     {
       "label": "PERSON",
-      "text": "JavaScript",
-      "start": 646,
-      "end": 656,
+      "text": "Priya Verma",
+      "start": 0,
+      "end": 11,
       "replacement": "[PERSON]",
       "source": "spacy",
       "dependency": "compound",
-      "head": "Web",
+      "head": "Lucknow",
       "context_tokens": [
         "\n",
-        "Web"
+        "Lucknow"
       ],
       "context_kind": "dependency"
     },
     {
       "label": "LOCATION",
-      "text": "React",
-      "start": 683,
-      "end": 688,
+      "text": "Lucknow",
+      "start": 12,
+      "end": 19,
       "replacement": "[LOCATION]",
       "source": "spacy",
-      "dependency": "conj",
-      "head": "CSS",
+      "dependency": "compound",
+      "head": "She",
       "context_tokens": [
-        "CSS",
-        ","
+        "Verma",
+        "\n",
+        "She"
       ],
       "context_kind": "dependency"
     },
     {
-      "label": "PERSON",
-      "text": "Algorithms",
-      "start": 730,
-      "end": 740,
-      "replacement": "[PERSON]",
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 20,
+      "end": 23,
+      "replacement": "[PRONOUN]",
       "source": "spacy",
-      "dependency": "conj",
-      "head": "Structures",
+      "dependency": "nsubj",
+      "head": "built",
       "context_tokens": [
-        "Structures",
-        ",",
-        "Programming"
+        "Lucknow",
+        "built"
       ],
       "context_kind": "dependency"
     },
     {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 81,
+      "end": 84,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "projects",
+      "context_tokens": [
+        "projects"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw1_Neha": [
+    {
       "label": "PERSON",
-      "text": "Java",
-      "start": 1231,
-      "end": 1235,
+      "text": "Neha Singh",
+      "start": 0,
+      "end": 10,
       "replacement": "[PERSON]",
       "source": "spacy",
       "dependency": "compound",
-      "head": "programming",
+      "head": "Pune",
       "context_tokens": [
-        "programming"
-      ],
-      "context_kind": "dependency"
-    },
-    {
-      "label": "PERSON",
-      "text": "ACADEMIC PROJECTS\nAI-Driven Smart File",
-      "start": 1553,
-      "end": 1591,
-      "replacement": "[PERSON]",
-      "source": "spacy",
-      "dependency": "compound",
-      "head": "PROJECTS",
-      "context_tokens": [
-        "Nov",
-        "Noida",
-        "UP",
-        "\u2013",
-        "Programmed"
+        "\n",
+        "Pune"
       ],
       "context_kind": "dependency"
     },
     {
       "label": "LOCATION",
-      "text": "React",
-      "start": 1879,
-      "end": 1884,
+      "text": "Pune",
+      "start": 11,
+      "end": 15,
       "replacement": "[LOCATION]",
-      "source": "spacy",
-      "dependency": "compound",
-      "head": "interface",
+      "source": "spacy+gazetteer",
+      "dependency": "nsubj",
+      "head": "built",
       "context_tokens": [
-        "interface"
+        "Singh",
+        "\n",
+        "She",
+        "built"
       ],
       "context_kind": "dependency"
     },
     {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 16,
+      "end": 19,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "appos",
+      "head": "Pune",
+      "context_tokens": [
+        "Pune"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 77,
+      "end": 80,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "projects",
+      "context_tokens": [
+        "projects"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw2_Rahul": [
+    {
       "label": "PERSON",
-      "text": "Java",
-      "start": 2467,
-      "end": 2471,
+      "text": "Rahul Sharma",
+      "start": 0,
+      "end": 12,
       "replacement": "[PERSON]",
       "source": "spacy",
-      "dependency": "dobj",
-      "head": "using",
+      "dependency": "compound",
+      "head": "Delhi",
       "context_tokens": [
-        "using",
-        "and",
+        "\n",
+        "Delhi"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Delhi",
+      "start": 13,
+      "end": 18,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "nsubj",
+      "head": "developed",
+      "context_tokens": [
+        "Sharma",
+        "\n",
+        "developed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 19,
+      "end": 21,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "developed",
+      "context_tokens": [
+        "developed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 114,
+      "end": 117,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "work",
+      "context_tokens": [
+        "work"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw2_Amit": [
+    {
+      "label": "PERSON",
+      "text": "Amit Gupta",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy+gazetteer",
+      "dependency": "compound",
+      "head": "Mumbai",
+      "context_tokens": [
+        "\n",
+        "Mumbai"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Mumbai",
+      "start": 11,
+      "end": 17,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "developed",
+      "context_tokens": [
+        "Amit",
+        "Gupta",
+        "\n",
+        "developed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 18,
+      "end": 20,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "developed",
+      "context_tokens": [
+        "developed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 113,
+      "end": 116,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "work",
+      "context_tokens": [
+        "work"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw2_Priya": [
+    {
+      "label": "PERSON",
+      "text": "Priya Verma",
+      "start": 0,
+      "end": 11,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Lucknow",
+      "context_tokens": [
+        "\n",
+        "Lucknow"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 12,
+      "end": 19,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "ROOT",
+      "head": "Lucknow",
+      "context_tokens": [
+        "Verma",
+        "\n"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 20,
+      "end": 23,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "developed",
+      "context_tokens": [
+        "developed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 116,
+      "end": 119,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "work",
+      "context_tokens": [
+        "work"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw2_Neha": [
+    {
+      "label": "PERSON",
+      "text": "Neha Singh",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Pune",
+      "context_tokens": [
+        "\n",
+        "Pune"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Pune",
+      "start": 11,
+      "end": 15,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "ROOT",
+      "head": "Pune",
+      "context_tokens": [
+        "Singh",
+        "\n"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 16,
+      "end": 19,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "developed",
+      "context_tokens": [
+        "developed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 112,
+      "end": 115,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "work",
+      "context_tokens": [
+        "work"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw3_Rahul": [
+    {
+      "label": "PERSON",
+      "text": "Rahul Sharma",
+      "start": 0,
+      "end": 12,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Delhi",
+      "context_tokens": [
+        "\n",
+        "Delhi"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Delhi",
+      "start": 13,
+      "end": 18,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "nsubj",
+      "head": "led",
+      "context_tokens": [
+        "Sharma",
+        "\n",
+        "led"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 19,
+      "end": 21,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "led",
+      "context_tokens": [
+        "led"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 105,
+      "end": 108,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "team",
+      "context_tokens": [
+        "team"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw3_Amit": [
+    {
+      "label": "PERSON",
+      "text": "Amit Gupta",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy+gazetteer",
+      "dependency": "compound",
+      "head": "Mumbai",
+      "context_tokens": [
+        "\n",
+        "Mumbai"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Mumbai",
+      "start": 11,
+      "end": 17,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "npadvmod",
+      "head": "led",
+      "context_tokens": [
+        "Amit",
+        "Gupta",
+        "\n",
+        "led"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 18,
+      "end": 20,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "led",
+      "context_tokens": [
+        "led"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 104,
+      "end": 107,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "team",
+      "context_tokens": [
+        "team"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw3_Priya": [
+    {
+      "label": "PERSON",
+      "text": "Priya Verma",
+      "start": 0,
+      "end": 11,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Lucknow",
+      "context_tokens": [
+        "\n",
+        "Lucknow"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 12,
+      "end": 19,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "ROOT",
+      "head": "Lucknow",
+      "context_tokens": [
+        "Verma",
+        "\n"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 20,
+      "end": 23,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "led",
+      "context_tokens": [
+        "led"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 107,
+      "end": 110,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "team",
+      "context_tokens": [
+        "team"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "sw3_Neha": [
+    {
+      "label": "PERSON",
+      "text": "Neha Singh",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Pune",
+      "context_tokens": [
+        "\n",
+        "Pune"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Pune",
+      "start": 11,
+      "end": 15,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "ROOT",
+      "head": "Pune",
+      "context_tokens": [
+        "Singh",
+        "\n"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 16,
+      "end": 19,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "led",
+      "context_tokens": [
+        "led"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 103,
+      "end": 106,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "team",
+      "context_tokens": [
+        "team"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da1_Rahul": [
+    {
+      "label": "PERSON",
+      "text": "Rahul Sharma",
+      "start": 0,
+      "end": 12,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Delhi",
+      "context_tokens": [
+        "\n",
+        "Delhi"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Delhi",
+      "start": 13,
+      "end": 18,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "ROOT",
+      "head": "Delhi",
+      "context_tokens": [
+        "Sharma",
+        "\n",
+        "built",
+        "."
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 19,
+      "end": 21,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "built",
+      "context_tokens": [
+        "built"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 88,
+      "end": 91,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "analysis",
+      "context_tokens": [
+        "analysis"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da1_Amit": [
+    {
+      "label": "PERSON",
+      "text": "Amit Gupta",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy+gazetteer",
+      "dependency": "compound",
+      "head": "Mumbai",
+      "context_tokens": [
+        "\n",
+        "Mumbai"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Mumbai",
+      "start": 11,
+      "end": 17,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "built",
+      "context_tokens": [
+        "Amit",
+        "Gupta",
+        "\n",
+        "built"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 18,
+      "end": 20,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "built",
+      "context_tokens": [
+        "built"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 87,
+      "end": 90,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "analysis",
+      "context_tokens": [
+        "analysis"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da1_Priya": [
+    {
+      "label": "PERSON",
+      "text": "Priya Verma",
+      "start": 0,
+      "end": 11,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Lucknow",
+      "context_tokens": [
+        "\n",
+        "Lucknow"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 12,
+      "end": 19,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "She",
+      "context_tokens": [
+        "Verma",
+        "\n",
+        "She"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 20,
+      "end": 23,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "built",
+      "context_tokens": [
+        "Lucknow",
+        "built"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 90,
+      "end": 93,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "analysis",
+      "context_tokens": [
+        "analysis"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da1_Neha": [
+    {
+      "label": "PERSON",
+      "text": "Neha Singh",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Pune",
+      "context_tokens": [
+        "\n",
+        "Pune"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Pune",
+      "start": 11,
+      "end": 15,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "nsubj",
+      "head": "built",
+      "context_tokens": [
+        "Singh",
+        "\n",
+        "She",
+        "built"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 16,
+      "end": 19,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "appos",
+      "head": "Pune",
+      "context_tokens": [
+        "Pune"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 86,
+      "end": 89,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "analysis",
+      "context_tokens": [
+        "analysis"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da2_Rahul": [
+    {
+      "label": "PERSON",
+      "text": "Rahul Sharma",
+      "start": 0,
+      "end": 12,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Delhi",
+      "context_tokens": [
+        "\n",
+        "Delhi"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Delhi",
+      "start": 13,
+      "end": 18,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "nsubj",
+      "head": "analysed",
+      "context_tokens": [
+        "Sharma",
+        "\n",
+        "analysed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 19,
+      "end": 21,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "analysed",
+      "context_tokens": [
+        "analysed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 92,
+      "end": 95,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "reports",
+      "context_tokens": [
+        "reports"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da2_Amit": [
+    {
+      "label": "PERSON",
+      "text": "Amit Gupta",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy+gazetteer",
+      "dependency": "compound",
+      "head": "Mumbai",
+      "context_tokens": [
+        "\n",
+        "Mumbai"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Mumbai",
+      "start": 11,
+      "end": 17,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "analysed",
+      "context_tokens": [
+        "Amit",
+        "Gupta",
+        "\n",
+        "analysed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 18,
+      "end": 20,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "analysed",
+      "context_tokens": [
+        "analysed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 91,
+      "end": 94,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "reports",
+      "context_tokens": [
+        "reports"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da2_Priya": [
+    {
+      "label": "PERSON",
+      "text": "Priya Verma",
+      "start": 0,
+      "end": 11,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Lucknow",
+      "context_tokens": [
+        "\n",
+        "Lucknow"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 12,
+      "end": 19,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "ROOT",
+      "head": "Lucknow",
+      "context_tokens": [
+        "Verma",
+        "\n"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 20,
+      "end": 23,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "analysed",
+      "context_tokens": [
+        "analysed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 94,
+      "end": 97,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "reports",
+      "context_tokens": [
+        "reports"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da2_Neha": [
+    {
+      "label": "PERSON",
+      "text": "Neha Singh",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Pune",
+      "context_tokens": [
+        "\n",
+        "Pune"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Pune",
+      "start": 11,
+      "end": 15,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "ROOT",
+      "head": "Pune",
+      "context_tokens": [
+        "Singh",
+        "\n"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 16,
+      "end": 19,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "analysed",
+      "context_tokens": [
+        "analysed"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 90,
+      "end": 93,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "reports",
+      "context_tokens": [
+        "reports"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da3_Rahul": [
+    {
+      "label": "PERSON",
+      "text": "Rahul Sharma",
+      "start": 0,
+      "end": 12,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Delhi",
+      "context_tokens": [
+        "\n",
+        "Delhi"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Delhi",
+      "start": 13,
+      "end": 18,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "nsubj",
+      "head": "cleaned",
+      "context_tokens": [
+        "Sharma",
+        "\n",
+        "cleaned"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 19,
+      "end": 21,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "cleaned",
+      "context_tokens": [
+        "cleaned"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 96,
+      "end": 99,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "SQL",
+      "context_tokens": [
         "SQL"
       ],
       "context_kind": "dependency"
-    },
+    }
+  ],
+  "da3_Amit": [
     {
       "label": "PERSON",
-      "text": "Java Data Structures",
-      "start": 2920,
-      "end": 2940,
+      "text": "Amit Gupta",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy+gazetteer",
+      "dependency": "compound",
+      "head": "Mumbai",
+      "context_tokens": [
+        "\n",
+        "Mumbai"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Mumbai",
+      "start": 11,
+      "end": 17,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "cleaned",
+      "context_tokens": [
+        "Amit",
+        "Gupta",
+        "\n",
+        "cleaned"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "He",
+      "start": 18,
+      "end": 20,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "cleaned",
+      "context_tokens": [
+        "cleaned"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "His",
+      "start": 95,
+      "end": 98,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "SQL",
+      "context_tokens": [
+        "SQL"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da3_Priya": [
+    {
+      "label": "PERSON",
+      "text": "Priya Verma",
+      "start": 0,
+      "end": 11,
       "replacement": "[PERSON]",
       "source": "spacy",
       "dependency": "compound",
-      "head": "Structures",
+      "head": "Lucknow",
       "context_tokens": [
-        "Earned",
-        ",",
-        "and",
-        "Programming"
+        "\n",
+        "Lucknow"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Lucknow",
+      "start": 12,
+      "end": 19,
+      "replacement": "[LOCATION]",
+      "source": "spacy",
+      "dependency": "ROOT",
+      "head": "Lucknow",
+      "context_tokens": [
+        "Verma",
+        "\n"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 20,
+      "end": 23,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "cleaned",
+      "context_tokens": [
+        "cleaned"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 98,
+      "end": 101,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "queries",
+      "context_tokens": [
+        "queries"
+      ],
+      "context_kind": "dependency"
+    }
+  ],
+  "da3_Neha": [
+    {
+      "label": "PERSON",
+      "text": "Neha Singh",
+      "start": 0,
+      "end": 10,
+      "replacement": "[PERSON]",
+      "source": "spacy",
+      "dependency": "compound",
+      "head": "Pune",
+      "context_tokens": [
+        "\n",
+        "Pune"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "LOCATION",
+      "text": "Pune",
+      "start": 11,
+      "end": 15,
+      "replacement": "[LOCATION]",
+      "source": "spacy+gazetteer",
+      "dependency": "ROOT",
+      "head": "Pune",
+      "context_tokens": [
+        "Singh",
+        "\n"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "She",
+      "start": 16,
+      "end": 19,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "nsubj",
+      "head": "cleaned",
+      "context_tokens": [
+        "cleaned"
+      ],
+      "context_kind": "dependency"
+    },
+    {
+      "label": "PRONOUN",
+      "text": "Her",
+      "start": 94,
+      "end": 97,
+      "replacement": "[PRONOUN]",
+      "source": "spacy",
+      "dependency": "poss",
+      "head": "queries",
+      "context_tokens": [
+        "queries"
       ],
       "context_kind": "dependency"
     }

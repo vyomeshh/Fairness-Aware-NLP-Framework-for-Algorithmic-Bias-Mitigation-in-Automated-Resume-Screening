@@ -80,15 +80,73 @@ class Parser:
         edges = [(t.head.i, t.i, t.dep_) for t in doc if t.head.i != t.i]
         ents: List[Entity] = []
         covered = set()
+
         for e in doc.ents:
             label = SPACY_LABEL_MAP.get(e.label_)
-            if label:
-                ids = list(range(e.start, e.end))
-                ents.append(Entity(e.start_char, e.end_char, e.text, label, ids, "spacy"))
-                covered.update(ids)
+            if not label or e.text.strip().lower() in config.TECHNICAL_SKILLS:
+                continue
+
+            lines = e.text.split("\n")
+            for line in lines:
+                val = line.strip()
+                if not val or val.lower() in config.TECHNICAL_SKILLS:
+                    continue
+                start_char = text.find(val, e.start_char)
+                end_char = start_char + len(val)
+                sub_label = "LOCATION" if val in config.LOCATIONS else label
+                ids = [t.i for t in doc if t.idx >= start_char and (t.idx + len(t.text)) <= end_char]
+                if ids and not any(k in covered for k in ids):
+                    ents.append(Entity(start_char, end_char, val, sub_label, ids, "spacy"))
+                    covered.update(ids)
+
         for t in doc:
             if t.pos_ == "PRON" and t.lower_ in config.GENDERED_PRONOUNS and t.i not in covered:
                 ents.append(Entity(t.idx, t.idx + len(t.text), t.text, "PRONOUN", [t.i], "spacy"))
+                covered.add(t.i)
+
+        n = len(doc)
+        i = 0
+        while i < n:
+            if i in covered or not doc[i].text.strip() or doc[i].text.strip().lower() in config.TECHNICAL_SKILLS:
+                i += 1
+                continue
+
+            loc_matched = False
+            for L in (3, 2, 1):
+                j = i + L - 1
+                if j < n and not any(k in covered for k in range(i, j + 1)):
+                    span = doc[i:j + 1]
+                    if "\n" not in span.text:
+                        phrase = span.text.strip()
+                        if phrase in config.LOCATIONS and phrase.lower() not in config.TECHNICAL_SKILLS:
+                            ids = list(range(i, j + 1))
+                            ents.append(Entity(span.start_char, span.end_char, phrase,
+                                               "LOCATION", ids, "spacy+gazetteer"))
+                            covered.update(ids)
+                            i = j + 1
+                            loc_matched = True
+                            break
+            if loc_matched:
+                continue
+
+            w = doc[i].text
+            if w in config.FIRST_NAMES:
+                if i + 1 < n and (i + 1) not in covered and doc[i + 1].text in config.SURNAMES and "\n" not in doc[i:i + 2].text:
+                    span = doc[i:i + 2]
+                    ids = [i, i + 1]
+                    ents.append(Entity(span.start_char, span.end_char, span.text.strip(),
+                                       "PERSON", ids, "spacy+gazetteer"))
+                    covered.update(ids)
+                    i += 2
+                    continue
+                ents.append(Entity(doc[i].idx, doc[i].idx + len(w), w, "PERSON", [i], "spacy+gazetteer"))
+                covered.add(i)
+            elif w in config.SURNAMES:
+                ents.append(Entity(doc[i].idx, doc[i].idx + len(w), w, "PERSON", [i], "spacy+gazetteer"))
+                covered.add(i)
+
+            i += 1
+
         ents.sort(key=lambda e: e.start)
         return ParsedDoc(text, tokens, ents, DependencyGraph([t.text for t in tokens], edges),
                          "spacy", True)
